@@ -1,0 +1,56 @@
+{
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.29.0",
+        "torch_version": "1.11.0+cu113"
+    },
+    "CompleteMaze": {
+        "checkpoints": [
+            {
+                "steps": 215596,
+                "file_path": "results\\ppo\\CompleteMaze\\CompleteMaze-215596.onnx",
+                "reward": -0.10999999940395355,
+                "creation_time": 1669802437.5643437,
+                "auxillary_file_paths": [
+                    "results\\ppo\\CompleteMaze\\CompleteMaze-215596.pt"
+                ]
+            },
+            {
+                "steps": 268231,
+                "file_path": "results\\ppo\\CompleteMaze\\CompleteMaze-268231.onnx",
+                "reward": -0.12000000476837158,
+                "creation_time": 1669802932.5908523,
+                "auxillary_file_paths": [
+                    "results\\ppo\\CompleteMaze\\CompleteMaze-268231.pt"
+                ]
+            },
+            {
+                "steps": 499977,
+                "file_path": "results\\ppo\\CompleteMaze\\CompleteMaze-499977.onnx",
+                "reward": 0.8790909187360243,
+                "creation_time": 1669804772.989919,
+                "auxillary_file_paths": [
+                    "results\\ppo\\CompleteMaze\\CompleteMaze-499977.pt"
+                ]
+            },
+            {
+                "steps": 500026,
+                "file_path": "results\\ppo\\CompleteMaze\\CompleteMaze-500026.onnx",
+                "reward": 0.8793750082453092,
+                "creation_time": 1669804773.2868428,
+                "auxillary_file_paths": [
+                    "results\\ppo\\CompleteMaze\\CompleteMaze-500026.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500026,
+            "file_path": "results\\ppo\\CompleteMaze.onnx",
+            "reward": 0.8793750082453092,
+            "creation_time": 1669804773.2868428,
+            "auxillary_file_paths": [
+                "results\\ppo\\CompleteMaze\\CompleteMaze-500026.pt"
+            ]
+        }
+    }
+}
