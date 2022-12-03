@@ -6,7 +6,9 @@
 Download Unity Hub + Unity Editor from https://unity.com/download
 
 Open Command Prompt/ Terminal
+
 git clone https://github.com/tylercruzsmith/CMPE195B_SphereArena.git
+
 
 Open Unity Hub 
 Select arrow to the right of "Open"
