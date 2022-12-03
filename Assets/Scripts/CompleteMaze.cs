@@ -4,6 +4,7 @@ using UnityEngine;
 using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
+using UnityEngine.SceneManagement;
 
 public class CompleteMaze : Agent
 {
@@ -11,6 +12,12 @@ public class CompleteMaze : Agent
 	Rigidbody rb;
 	Transform goalTransform;
 	float maxDistance;
+
+    public void Back()
+    {
+        SceneManager.LoadScene("LoadingScreen");
+        //or "Name of Scene"
+    }
 
     public override void Initialize()
     {

@@ -4,6 +4,7 @@ using UnityEngine;
 using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
+using UnityEngine.SceneManagement;
 
 public class HitBallInGoalAgent : Agent
 {
@@ -17,7 +18,13 @@ public class HitBallInGoalAgent : Agent
     public CheckGoal checkGoal;
     public Bounds bounds;
     GameObject ground;
-   
+
+
+    public void Back()
+    {
+        SceneManager.LoadScene("LoadingScreen");
+        //or "Name of Scene"
+    }
 
     public override void Initialize()
     {
@@ -29,8 +36,8 @@ public class HitBallInGoalAgent : Agent
     {
         print("starting...");
         //transform.position = Vector3.zero;
-        transform.position = playerStart;
-        ballTransform.position = ballStart;
+        transform.localPosition = playerStart;
+        ballTransform.localPosition = ballStart;
         ball.GetComponent<Rigidbody>().velocity = Vector3.zero;
     }
 
@@ -39,10 +46,10 @@ public class HitBallInGoalAgent : Agent
     public override void CollectObservations(VectorSensor sensor)
     {
        
-        sensor.AddObservation(transform.position);
-        sensor.AddObservation(ballTransform.position);
-        sensor.AddObservation(goalTransform.position);
-        sensor.AddObservation(goalTransform.position - ballTransform.position);
+        sensor.AddObservation(transform.localPosition);
+        sensor.AddObservation(ballTransform.localPosition);
+        sensor.AddObservation(goalTransform.localPosition);
+        sensor.AddObservation(Vector3.Distance(ballTransform.localPosition, goalTransform.localPosition));
         
     }
     public override void OnActionReceived(ActionBuffers actions)
